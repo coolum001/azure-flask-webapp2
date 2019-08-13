@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    {% if title %}
+    <title>
+        {{ title }} - net-analysis.com}}
+    </title>
+    {% else %}
+    <title>
+        Python Flask Webapp - net-analysis.com
+    </title>
+    {% endif %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+</head>
+
+<body>
+    <div class="header">
+        Azure Web App. <a href="/index">Home</a>
+        <a href="/file">List File Contents</a>
+    </div>
+    <hr />
+    {% block content %}
+    {% endblock %}
+
+</body>
+<div id="footer">
+    <span class="tiny">
+        Copyright © Don Cameron, 2019. www.net-analysis.com
+    </span>
+</div>
+
+</html>
